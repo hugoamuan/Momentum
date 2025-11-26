@@ -1,0 +1,32 @@
+/* Background Effect */
+.crt_bg {
+  position: fixed;
+  inset: 0;
+
+  background: linear-gradient(
+    rgba(0, 180, 255, 0.12),
+    rgba(255, 0, 120, 0.12)
+  );
+  background-size: 100vw 20vh;
+  background-repeat: repeat;
+
+  animation: bgscroll 10s linear infinite,
+             hueShift 30s linear infinite;
+
+  filter: saturate(1.2) blur(1px);
+  pointer-events: none;
+  z-index: -1;
+}
+
+@keyframes bgscroll {
+  100% { background-position: 0 100%; }
+}
+
+@keyframes hueShift {
+  100% { filter: hue-rotate(360deg); }
+}
+
+body {
+  margin: 0;
+  background: #0a0a0f; 
+}
