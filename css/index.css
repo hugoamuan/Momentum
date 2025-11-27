@@ -11,7 +11,7 @@
   background-size: 100vw 20vh;
   background-repeat: repeat;
 
-  animation: bgscroll 10s linear infinite,
+  animation: bgscroll 14s linear infinite,
              hueShift 30s linear infinite;
 
   filter: saturate(1.2) blur(1px);
