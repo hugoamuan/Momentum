@@ -7,6 +7,7 @@
     rgba(0, 180, 255, 0.12),
     rgba(255, 0, 120, 0.12)
   );    
+
   background-size: 100vw 20vh;
   background-repeat: repeat;
 
@@ -14,25 +15,28 @@
              hueShift 30s linear infinite;
 
   filter: saturate(1.2) blur(1px);
+
   pointer-events: none;
   z-index: -1;
 }
 
+/* FIX loop snapping by defining BOTH 0% and 100% */
 @keyframes bgscroll {
+  0%   { background-position: 0 0%; }
   100% { background-position: 0 100%; }
 }
 
 @keyframes hueShift {
+  0%   { filter: hue-rotate(0deg); }
   100% { filter: hue-rotate(360deg); }
 }
 
 body {
   margin: 0;
-  background: #0a0a0f; 
+  background: #0a0a0f;
   color: white;
 }
 
-/* Footer */
 footer {
   position: absolute;
   bottom: 0;
